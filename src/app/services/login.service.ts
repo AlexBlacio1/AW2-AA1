@@ -14,4 +14,8 @@ export class LoginService {
   getLogin():Observable<any>{
     return this.http.get(this.API_LOGIN)
   }
+
+  postLogin(usuario:any):Observable<any>{
+    return this.http.post(this.API_LOGIN, usuario)
+  }
 }
