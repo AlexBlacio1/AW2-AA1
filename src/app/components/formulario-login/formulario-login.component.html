@@ -1,33 +1,32 @@
 <body class="bg-gray-100">
 
-    <!-- Contenedor que usa flexbox para centrar el formulario -->
+
     <div class="flex items-center justify-center min-h-screen">
-        <!-- Formulario de Login centrado -->
+
         <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
             <h2 class="text-2xl font-semibold text-center text-gray-800">Login</h2>
 
-            <!-- Formulario -->
-            <form action="#" method="POST" class="space-y-4">
-                <!-- Campo de email -->
+            <form (ngSubmit)="login(formulario)" #formulario="ngForm" class="space-y-4">
+
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="you@example.com">
+                    <input type="email" id="email" name="email" [(ngModel)]="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="you@example.com">
                 </div>
 
-                <!-- Campo de password -->
+
                 <div>
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <input type="password" id="password" name="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="********">
+                    <input type="password" id="password" name="password" [(ngModel)]="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="********">
                 </div>
 
-                <!-- Botón de Login -->
+
                 <div>
                     <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                         Login
                     </button>
                 </div>
 
-                <!-- Enlace a registro -->
+
                 <div class="text-center">
                     <p class="text-sm text-gray-600">
                         ¿No tienes una cuenta? <a href="#" class="text-indigo-600 hover:text-indigo-700">Regístrate aquí</a>
