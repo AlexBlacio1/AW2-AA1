@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class GestorComponent {
 
+  logout(){
+    localStorage.setItem("login","false")
+    window.location.href='home'
+  }
 }

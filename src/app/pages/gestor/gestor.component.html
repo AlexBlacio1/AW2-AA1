@@ -8,16 +8,10 @@
 
         <!-- Mensaje de estado -->
         <div class="mb-6">
-            <p class="text-center text-green-500">¡Acción realizada con éxito!</p>
+            <p class="text-center text-green-500">¡Gestiona tus usuarios!</p>
             <!-- Este mensaje se puede cambiar dinámicamente según el estado de la acción -->
         </div>
 
-        <!-- Botón para agregar un nuevo usuario -->
-        <div class="mb-4 text-center">
-            <button class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Agregar Usuario</button>
-        </div>
-
-        <!-- Tabla de usuarios -->
         <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
             <table class="min-w-full table-auto">
                 <thead class="bg-gray-800 text-white">
@@ -67,4 +61,8 @@
 
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@1.5.3/dist/flowbite.min.js"></script>
+
+    <div class="mb-4 text-center">
+        <button (click)="logout()" type="submit" class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Cerrar Sesión</button>
+    </div>
 </body>
